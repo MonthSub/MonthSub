@@ -21,7 +21,7 @@ const theme: Theme = {
   },
 
   device: {
-    tablet: `screen and (max-width: ${1140 - 1}px)`,
+    tablet: `screen and (max-width: ${1200 - 1}px)`,
     mobile: `screen and (max-width: ${768 - 1}px)`,
     mobileS: `screen and (max-width: ${480 - 1}px)`,
   },
