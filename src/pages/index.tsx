@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { Input } from '@/components'
 
 export default function Home() {
   return (
@@ -10,7 +11,9 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>MonthSub</h1>
+        {/* <h1>MonthSub</h1> */}
+        <Input label="아이디" validateMessage="형식이 맞지 않습니다."></Input>
+        <Input label="비밀번호"></Input>
       </main>
     </div>
   )
