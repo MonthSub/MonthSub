@@ -1,5 +1,5 @@
 import { Global, ThemeProvider } from '@emotion/react'
-import { globalStyle, theme } from '../styles'
+import { globalStyle, theme } from '@/styles'
 
 function MyApp({ Component, pageProps }) {
   return (
