@@ -34,7 +34,7 @@ const StyledInput = styled.input<InputProps>`
   border-radius: 2px;
   border: ${({ theme }) => `2px solid ${theme.color.border}`};
   padding: 8px 4px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   &:focus {
     border-color: ${({ theme }) => theme.color.main_coral};
     outline-width: 0;
