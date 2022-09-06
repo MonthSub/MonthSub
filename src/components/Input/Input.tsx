@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { limitCharactersLength } from '@/utils'
 
 interface InputProps extends React.ComponentProps<'input'> {
   label?: string
@@ -10,8 +11,9 @@ const Input = ({ label, validateMessage, ...props }: InputProps) => {
     <InputContainer>
       {label && <StyledLabel>{label}</StyledLabel>}
       <StyledInput {...props}></StyledInput>
-      {validateMessage && <StyledSpan>{validateMessage}</StyledSpan>}
-      {/* 글자 수 제한하기 */}
+      {validateMessage && (
+        <StyledSpan>{limitCharactersLength(validateMessage, 30)}</StyledSpan>
+      )}
     </InputContainer>
   )
 }
