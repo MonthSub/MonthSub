@@ -10,7 +10,7 @@ const Input = ({ label, validateMessage, ...props }: InputProps) => {
   return (
     <InputContainer>
       {label && <StyledLabel>{label}</StyledLabel>}
-      <StyledInput {...props}></StyledInput>
+      <StyledInput {...props} />
       {validateMessage && (
         <StyledSpan>{limitCharactersLength(validateMessage, 30)}</StyledSpan>
       )}
