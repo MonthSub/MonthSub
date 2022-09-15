@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { Input } from '@/components'
 
 export default function Home() {
   return (
