@@ -1,35 +1,40 @@
 import styled from '@emotion/styled'
 import { limitCharactersLength } from '@/utils'
 
-interface InputProps extends React.ComponentProps<'input'> {
+interface FormInputProps extends React.ComponentProps<'input'> {
   label?: string
-  validateMessage?: string
+  errorMessage?: string
 }
 
-const Input = ({ label, validateMessage, ...props }: InputProps) => {
+const FormInput = ({
+  label,
+  errorMessage,
+  className,
+  ...props
+}: FormInputProps) => {
   return (
-    <InputContainer>
-      {label && <StyledLabel>{label}</StyledLabel>}
-      <StyledInput {...props} />
-      {validateMessage && (
-        <StyledSpan>{limitCharactersLength(validateMessage, 30)}</StyledSpan>
+    <FormInputBox className={className}>
+      {label && <Label>{label}</Label>}
+      <Input {...props} />
+      {errorMessage && (
+        <ErrorText>{limitCharactersLength(errorMessage, 30)}</ErrorText>
       )}
-    </InputContainer>
+    </FormInputBox>
   )
 }
 
-const InputContainer = styled.div`
+const FormInputBox = styled.div`
   width: 100%;
   max-width: 327px;
 `
 
-const StyledLabel = styled.label`
+const Label = styled.label`
   display: block;
   margin-bottom: 8px;
   font-size: ${({ theme }) => theme.fontSize.base_16};
 `
 
-const StyledInput = styled.input<InputProps>`
+const Input = styled.input<FormInputProps>`
   display: block;
   width: 100%;
   height: 34px;
@@ -43,7 +48,7 @@ const StyledInput = styled.input<InputProps>`
   }
 `
 
-const StyledSpan = styled.span`
+const ErrorText = styled.span`
   display: block;
   height: 14px;
   text-align: right;
@@ -51,4 +56,4 @@ const StyledSpan = styled.span`
   color: ${({ theme }) => theme.color.main_coral};
 `
 
-export default Input
+export default FormInput
