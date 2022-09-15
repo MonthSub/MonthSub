@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import Button from './Button'
 import { darken } from 'polished'
 
-const darkenAmount = 0.06
+const DARKEN_AMOUNT = 0.06
 
 const ColorFillButton = styled(Button)`
   color: #fff;
@@ -10,7 +10,7 @@ const ColorFillButton = styled(Button)`
   &:hover {
     color: darken(darkenAmount, #fff);
     background-color: ${({ theme }) =>
-      darken(darkenAmount, theme.color.main_coral)};
+      darken(DARKEN_AMOUNT, theme.color.main_coral)};
   }
 `
 
