@@ -4,8 +4,12 @@ interface ButtonProps extends React.ComponentProps<'button'> {
   round: boolean
 }
 
-const Button = ({ round = false, onClick, ...props }) => {
-  return <StyledButton onClick={onClick} round={round} {...props} />
+const Button = ({ children, round = false, onClick, ...props }) => {
+  return (
+    <StyledButton onClick={onClick} round={round} {...props}>
+      {children}
+    </StyledButton>
+  )
 }
 
 const StyledButton = styled.button<ButtonProps>`
