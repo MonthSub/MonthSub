@@ -43,6 +43,7 @@ const globalStyle = css`
     cursor: pointer;
     outline: none;
     border: none;
+    background-color: transparent;
   }
 
   button:focus,
