@@ -1,5 +1,4 @@
 import styled from '@emotion/styled'
-import { reverse } from 'dns'
 
 interface TagProps extends React.ComponentProps<'div'> {
   reverse: boolean
