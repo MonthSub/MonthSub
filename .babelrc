@@ -10,5 +10,9 @@
       }
     ]
   ],
-  "plugins": ["@emotion/babel-plugin"]
+  "plugins": [
+    ["styled-components", { "ssr": true }],
+    "inline-react-svg",
+    "@emotion/babel-plugin"
+  ]
 }
