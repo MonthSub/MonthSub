@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import { css } from '@emotion/react'
 import Tag from './Tag'
 
-const MainTag = styled(Tag)`
+const ColorTag = styled(Tag)`
   ${({ theme, reverse }) => css`
     border: 1px solid ${theme.color.main_coral};
     color: ${reverse ? theme.color.main_coral : '#fff'};
@@ -10,4 +10,4 @@ const MainTag = styled(Tag)`
   `}
 `
 
-export default MainTag
+export default ColorTag
